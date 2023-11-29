@@ -11,6 +11,8 @@ const company = {
 };
 
 // example: export const {value1} = myObject;
+export const { course } = company;
+//console.log(company);
 
 // EXERCISE 2
 // We have an object called 'user'.
@@ -21,15 +23,21 @@ const company = {
 
 const user = { name: "John", years: 30 };
 
+export const { name: name, years: age, isAdmin = false } = user;
+//console.log(user);
+
 // EXERCISE 3
 // Extract the variables from the dog object and
 // rename them like "dogName", "dogBreed", and "dogAge", respectively.
 
 const dog = {
-  name: "Pluto",
-  breed: "husky",
-  age: 5,
+  dogName: "Pluto",
+  dogBreed: "husky",
+  dogAge: 5,
 };
+
+export const { dogName, dogBreed, dogAge } = dog;
+// console.log(dog);
 
 // EXERCISE 4
 // Extract the 'lastName' property from the person object as "personLastName".
@@ -40,3 +48,6 @@ const person = {
   age: 24,
   firstName: "Alex",
 };
+
+export const { lastName: personLastName, ...moreInformation } = person;
+// console.log(person);
